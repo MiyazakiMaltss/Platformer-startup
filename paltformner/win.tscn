@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c731rvnfmcawe"]
+
+[ext_resource type="Script" uid="uid://d26nqe12jdbm7" path="res://win.gd" id="1_wao2c"]
+
+[node name="win" type="Node" unique_id=205415865]
+script = ExtResource("1_wao2c")
+
+[node name="Label" type="Label" parent="." unique_id=449263596]
+anchors_preset = -1
+anchor_right = 0.057000004
+anchor_bottom = 0.095000006
+offset_left = 254.0
+offset_top = 161.0
+offset_right = 781.336
+offset_bottom = 122.439995
+text = "You are the winner! you are the congratulate! aand you are the very bestest!!"
+
+[node name="restart" type="Button" parent="." unique_id=829925750]
+offset_left = 253.0
+offset_top = 374.0
+offset_right = 353.0
+offset_bottom = 405.0
+text = "Do it again"
+
+[node name="quit" type="Button" parent="." unique_id=392682125]
+offset_left = 675.0
+offset_top = 374.0
+offset_right = 822.0
+offset_bottom = 405.0
+text = "Delete paltformer"
+
+[connection signal="pressed" from="restart" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

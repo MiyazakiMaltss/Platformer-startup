@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bttlb6khkhrnh" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://b3224ipw8cxsr" path="res://icon.svg" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cyitge351c7ip" path="res://k_zone.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bhqd2kkf6ls0y" path="res://w_zone.tscn" id="4_1bvp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qevy"]
 size = Vector2(4.436975, 4.369747)
@@ -145,6 +146,9 @@ sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4qevy"]
 distance = -20.87436
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5i6t"]
+size = Vector2(225, 193)
+
 [node name="Node" type="Node" unique_id=1777539692]
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=683753162]
@@ -178,3 +182,10 @@ scale = Vector2(2.11, 2.11)
 position = Vector2(-1, 5)
 scale = Vector2(2.11, 2.11)
 shape = SubResource("WorldBoundaryShape2D_4qevy")
+
+[node name="w_zone" parent="." unique_id=1327855644 instance=ExtResource("4_1bvp3")]
+position = Vector2(-2995, 1268)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="w_zone" unique_id=1133313512]
+position = Vector2(38.5, 70.5)
+shape = SubResource("RectangleShape2D_r5i6t")
