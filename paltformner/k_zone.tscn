@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cyitge351c7ip"]
+
+[ext_resource type="Script" uid="uid://bswxw5l2opaws" path="res://k_zone.gd" id="1_ly2i6"]
+
+[node name="k-zone" type="Area2D" unique_id=1183693108]
+script = ExtResource("1_ly2i6")
+
+[node name="Timer" type="Timer" parent="." unique_id=1446547444]
+wait_time = 0.27
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
